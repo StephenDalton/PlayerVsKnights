@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: a3a3f3fe578bb65469803c9ebdee5a2b
+timeCreated: 1520033532
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: ShoCard Caps NF
+  fontNames:
+  - ShoCard Caps NF
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

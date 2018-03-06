@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - CameraLeader
+  - Enemy
+  - Obstacle
+  - Projectile
+  - WalkWay
+  - Coin
+  - GameOverPanel
+  - Heart
+  - Wizard
+  - Pirate
+  - Jane
+  - Aristoppable
+  - RedBeard
+  - Goat
+  - Detonator
+  - AudioObject
+  - GameAudio
+  - Boss
+  - soundtoggle
+  - Chest
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Gen
+  - Jelly
+  - Knights
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3128651289
+    locked: 0
+  - name: Wall
+    uniqueID: 3442995785
+    locked: 0
+  - name: UI
+    uniqueID: 1487893187
+    locked: 0
