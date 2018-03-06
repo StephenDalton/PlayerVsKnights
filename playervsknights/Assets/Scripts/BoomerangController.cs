@@ -35,7 +35,7 @@ public class BoomerangController : MonoBehaviour {
 		if (other.tag == "Player") {
 			Destroy (gameObject);
 		}
-		if (other.tag == "Enemy") {
+		if (other.tag == "Enemy" || other.tag == "Boss") {
 			AudioSource.PlayClipAtPoint (killSound, transform.position);
 			other.gameObject.SetActive (false);
 			returning = true;

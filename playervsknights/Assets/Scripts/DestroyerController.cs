@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyerController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "Enemy") {
+		if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Boss") {
 			other.gameObject.SetActive (false);
 		}
 		if (other.gameObject.tag == "Obstacle") {

@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
 				other.gameObject.SetActive (false);
 				HUDScript.numberOfKills += 1;
 			}
-			if (other.gameObject.tag == "Obstacle") {
+			if (other.gameObject.tag == "Obstacle" || other.gameObject.tag == "Boss") {
 				if (HUDScript.numberOfLivesLeft > 0) {
 					HUDScript.numberOfLivesLeft -= 1;
 					gameObject.GetComponent<Animator> ().Play ("LifeLossAnimation");
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour {
 				}
 			}
 		} else {
-			if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Obstacle") {
+			if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Obstacle" || other.gameObject.tag == "Boss") {
 				if (HUDScript.numberOfLivesLeft > 0) {
 					HUDScript.numberOfLivesLeft -= 1;
 					gameObject.GetComponent<Animator> ().Play ("LifeLossAnimation");

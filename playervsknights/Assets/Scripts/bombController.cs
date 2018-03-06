@@ -17,7 +17,7 @@ public class bombController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "Enemy") {
+		if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Boss") {
 			HUDScript.numberOfKills += 1;
 			other.gameObject.SetActive (false);
 			Destroy (gameObject, .7f);
