@@ -1455,7 +1455,22 @@ Prefab:
     - target: {fileID: 50529379945264458, guid: 9360b21c85c1a9241beda6bb6d8ae568,
         type: 2}
       propertyPath: m_AngularDrag
-      value: 1
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114442974225176798, guid: 9360b21c85c1a9241beda6bb6d8ae568,
+        type: 2}
+      propertyPath: fireButton
+      value: 
+      objectReference: {fileID: 1095639633}
+    - target: {fileID: 50529379945264458, guid: 9360b21c85c1a9241beda6bb6d8ae568,
+        type: 2}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50529379945264458, guid: 9360b21c85c1a9241beda6bb6d8ae568,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9360b21c85c1a9241beda6bb6d8ae568, type: 2}
