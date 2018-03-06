@@ -17,11 +17,10 @@ public class CoinController : MonoBehaviour {
 			AudioSource.PlayClipAtPoint (coinSound, transform.position);
 			gameObject.SetActive (false);
 		}
-
 	}
 
 	void Update () {
-		if (PlayerController.playerID == 3) {
+		if (PlayerController.playerID == 3 && GameManager.isGameOver == false) {
 			playertrans = GameObject.Find ("Player").transform;
 			if (PlayerController.playerExists) {
 				if (Vector3.Distance (transform.position, playertrans.position) < dist) {

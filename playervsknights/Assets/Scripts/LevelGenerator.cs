@@ -34,7 +34,7 @@ public class LevelGenerator : MonoBehaviour {
 
 
 	void Start() {
-		//SpawnOandE ();
+		SpawnOandE ();
 		currentGameWidth = -12f;
 		SpawnWalkWay ();
 	}

@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 	public static bool playerExists = true;
 
 	public GameManager theGameManager;
-	static public int playerID = 0;
+	static public int playerID;
 	public int playerScore;
 
 

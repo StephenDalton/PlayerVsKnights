@@ -28,6 +28,7 @@ public class MainMenu : MonoBehaviour {
 	public void PlayGame () {
 		LevelGenerator.initialSpawn = true;
 		HUDScript.numberOfLivesLeft = 1;
+		PlayerController.playerExists = true;
 		LevelGenerator.walkWayLoadsIncrement = 0;
 		LevelGenerator.totalWalkWayLoads = 0;
 		SpawnMoveMent.verticalSpeed = 10;
