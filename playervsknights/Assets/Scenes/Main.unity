@@ -5577,6 +5577,11 @@ Prefab:
       propertyPath: soundToggle
       value: 
       objectReference: {fileID: 222487431}
+    - target: {fileID: 114364074064035544, guid: d35e81fc746bee044900ea6374e47612,
+        type: 2}
+      propertyPath: fireButton
+      value: 
+      objectReference: {fileID: 1095639633}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d35e81fc746bee044900ea6374e47612, type: 2}
   m_IsPrefabParent: 0

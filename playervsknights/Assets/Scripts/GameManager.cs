@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
 	public static string playerUsername;
 	public static bool nameChosen;
 	public Toggle soundToggle;
+	public Button fireButton;
 
 	//public static float highScore;
 	int totalEnemiesKilled;
@@ -27,6 +28,11 @@ public class GameManager : MonoBehaviour {
 		if (PlayerPrefs.GetInt ("audio") == 1) {
 			soundToggle.isOn = true;
 			AudioListener.pause = false;
+		}
+		if (PlayerController.playerID == 3 || PlayerController.playerID == 4) {
+			fireButton.gameObject.SetActive (false);
+		} else {
+			fireButton.gameObject.SetActive (true);
 		}
 	}
 
