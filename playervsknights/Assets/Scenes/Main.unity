@@ -1472,6 +1472,11 @@ Prefab:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95489819317931812, guid: 9360b21c85c1a9241beda6bb6d8ae568,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9360b21c85c1a9241beda6bb6d8ae568, type: 2}
   m_IsPrefabParent: 0
@@ -1945,36 +1950,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: '  Score: '
---- !u!1 &437422725 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1628062366802482, guid: e209ca10348a33f4dafa0e8fbe24d6d0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1617392381}
---- !u!114 &437422730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 437422725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f579fefeba774393965b534c29d2e83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  privateCode: t1vduP4M-0mETiku2_iu3QI0ZFXBJ6zUWAMMOT_07sFg
-  publicCode: 5a95b21939992d09e4f02f17
---- !u!114 &437422731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 437422725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55ee3b69dc30d6946bc773615a0e2768, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highscoreText: []
 --- !u!1 &455828487
 GameObject:
   m_ObjectHideFlags: 0
@@ -3567,11 +3542,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78e3d16cd8739f440804152ceb4f3a28, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &991336588 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1928188101182260, guid: 9360b21c85c1a9241beda6bb6d8ae568,
-    type: 2}
-  m_PrefabInternal: {fileID: 357534125}
 --- !u!1 &1003483594
 GameObject:
   m_ObjectHideFlags: 0
@@ -3901,7 +3871,8 @@ Prefab:
       propertyPath: firstBlueNumberOfObstacles
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 50728951728115450, guid: c6aa2dde6fdda9844a9e9a68ddf5982c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c6aa2dde6fdda9844a9e9a68ddf5982c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1090733245
@@ -5415,21 +5386,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114922770798808640, guid: e209ca10348a33f4dafa0e8fbe24d6d0,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 991336588}
-    - target: {fileID: 114922770798808640, guid: e209ca10348a33f4dafa0e8fbe24d6d0,
-        type: 2}
-      propertyPath: button
-      value: 
-      objectReference: {fileID: 534760640}
-    - target: {fileID: 114922770798808640, guid: e209ca10348a33f4dafa0e8fbe24d6d0,
-        type: 2}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 534760641}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e209ca10348a33f4dafa0e8fbe24d6d0, type: 2}
   m_IsPrefabParent: 0

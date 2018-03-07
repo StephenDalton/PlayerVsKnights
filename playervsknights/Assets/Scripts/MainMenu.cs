@@ -37,6 +37,7 @@ public class MainMenu : MonoBehaviour {
 		HUDScript.coinsFoundThisGame = 0;
 		HUDScript.numberOfKills = 0;
 		HUDScript.totalScore = 0;
+		HUDScript.timeScore = 0;
 		GameManager.isGameOver = false;
 		if (GameManager.isFirstTimePlayer == true) {
 			SceneManager.LoadScene (playGameLevel);
