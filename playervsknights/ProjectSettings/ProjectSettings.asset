@@ -641,11 +641,12 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Build: 0
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 12966097-cf9e-49a9-b45d-2e876c1ad688
-  projectName: SlimeRunV1
+  projectName: PlayerVsKnights
   organizationId: stephendalton
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

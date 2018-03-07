@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour {
 
-	private float verticalSpeed = 20;
+	private float verticalSpeed = 14;
 	private Rigidbody2D playerRigidBody;
 
 	public Vector3 playerPos;
