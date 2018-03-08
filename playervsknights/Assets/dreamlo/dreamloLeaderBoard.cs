@@ -27,7 +27,6 @@ public class dreamloLeaderBoard : MonoBehaviour {
 	
 	void Awake () {
 		instance = this;
-		AddNewHighScore ("Ashleigh", 400000);
 		highscoresDisplay = GetComponent<DisplayHighscores> ();
 	}
 

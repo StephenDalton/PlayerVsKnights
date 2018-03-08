@@ -25,6 +25,7 @@ public class MainMenu : MonoBehaviour {
 		}
 	}
 
+	//Forgive me for this function...
 	public void PlayGame () {
 		LevelGenerator.initialSpawn = true;
 		HUDScript.numberOfLivesLeft = 1;
@@ -39,12 +40,12 @@ public class MainMenu : MonoBehaviour {
 		HUDScript.totalScore = 0;
 		HUDScript.timeScore = 0;
 		GameManager.isGameOver = false;
-		if (GameManager.isFirstTimePlayer == true) {
-			SceneManager.LoadScene (playGameLevel);
-			Time.timeScale = 0f; 
-		} else {
+		if (PlayerPrefs.GetInt ("tutorialcompleted") == 1) {
 			SceneManager.LoadScene (playGameLevel);
 			Time.timeScale = 1f;
+		} else {
+			SceneManager.LoadScene (playGameLevel);
+			Time.timeScale = 0f;
 		}
 	}
 

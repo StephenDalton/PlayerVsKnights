@@ -10,13 +10,10 @@ public class GameManager : MonoBehaviour {
 	public GameObject pauseGame;
 	public PlayerController thePlayer;
 	public static bool isGameOver = false;
-	public static bool isFirstTimePlayer = true;
 	public static string playerUsername;
 	public static bool nameChosen;
 	public Toggle soundToggle;
 	public Button fireButton;
-
-	//public static float highScore;
 	int totalEnemiesKilled;
 	public int totalCoinsCollected;
 
@@ -37,6 +34,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void RestartGame() {
+		PlayerPrefs.SetInt ("tutorialcompleted", 1);
 		Time.timeScale = 0;
 		isGameOver = true;
 		if (PlayerPrefs.GetInt ("highscore") < HUDScript.totalScore) {
@@ -48,6 +46,7 @@ public class GameManager : MonoBehaviour {
 		thePlayer.gameObject.SetActive (false);
 	}
 
+	//Forgive me for this function...
 	public void Reset () {
 		LevelGenerator.initialSpawn = true;
 		LevelGenerator.totalWalkWayLoads = 0;
@@ -61,14 +60,9 @@ public class GameManager : MonoBehaviour {
 		HUDScript.timeScore = 0;
 		HUDScript.coinsFoundThisGame = 0;
 		isGameOver = false;
-		if (isFirstTimePlayer == true) {
-			Time.timeScale = 0f;
-			isFirstTimePlayer = false;
-		} else {
-			Time.timeScale = 1f;
-		}
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 		thePlayer.gameObject.SetActive (true);
+		Time.timeScale = 1f;
 	}
 
 	public void PauseGame () {
@@ -78,7 +72,11 @@ public class GameManager : MonoBehaviour {
 
 	public void UnpauseGame () {
 		pauseGame.SetActive (false);
-		Time.timeScale = 1;
+		if (isGameOver == true) {
+			Time.timeScale = 0;
+		} else {
+			Time.timeScale = 1;
+		}
 	}
 
 	public void soundToggleChange (bool mute) {

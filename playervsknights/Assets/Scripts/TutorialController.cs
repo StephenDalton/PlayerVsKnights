@@ -20,10 +20,10 @@ public class TutorialController : MonoBehaviour {
 	public Text movingText;
 
 	public void Start() {
-		if (GameManager.isFirstTimePlayer == true) {
-			playTutorial.gameObject.SetActive (true);		
+		if (PlayerPrefs.GetInt ("tutorialcompleted") == 1) {
+			playTutorial.gameObject.SetActive (false);		
 		} else {
-			playTutorial.gameObject.SetActive (false);
+			playTutorial.gameObject.SetActive (true);
 		}
 	}
 
@@ -70,6 +70,6 @@ public class TutorialController : MonoBehaviour {
 		movingText.gameObject.SetActive (false);
 		playTutorial.gameObject.SetActive (false);
 		Time.timeScale = 1f;
-		GameManager.isFirstTimePlayer = false;
+		PlayerPrefs.SetInt ("tutorialcompleted", 1);
 	}
 }

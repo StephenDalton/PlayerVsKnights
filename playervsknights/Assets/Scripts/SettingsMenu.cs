@@ -39,7 +39,7 @@ public class SettingsMenu : MonoBehaviour {
 	}
 
 	public void goToFeedBackURL () {
-		Application.OpenURL ("www.stomt.com/playervsknights");
+		Application.OpenURL ("https://www.stomt.com/playervsknights");
 	}
 	public void resetUsername() {
 		PlayerPrefs.DeleteKey ("username");
@@ -50,6 +50,7 @@ public class SettingsMenu : MonoBehaviour {
 		PlayerPrefs.SetInt ("buyaristoppable", 0);
 		PlayerPrefs.SetInt ("buyredbeard", 0);
 		PlayerPrefs.SetInt ("buygoat", 0);
+		PlayerPrefs.SetInt ("tutorialcompleted", 0);
 
 	}
 
