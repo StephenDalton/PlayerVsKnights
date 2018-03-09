@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour {
 
-	private float verticalSpeed = 14;
+	private float verticalSpeed = 13;
 	private Rigidbody2D playerRigidBody;
 
 	public Vector3 playerPos;
@@ -18,9 +18,21 @@ public class PlayerController : MonoBehaviour {
 	static public int playerID;
 	public int playerScore;
 
+	public GameObject petJelly;
+
 
 	void Start () {
 		playerRigidBody = GetComponent<Rigidbody2D> ();
+		if (playerID == 4) {
+			WalkWayManager.verticalSpeed += 1;
+			SpawnMoveMent.verticalSpeed += 1;
+		}
+		if (PlayerPrefs.GetInt ("buyjelly") == 1) {
+			petJelly.gameObject.SetActive (true);
+			HUDScript.numberOfLivesLeft += 1;
+		} else {
+			petJelly.gameObject.SetActive (false);
+		}
 
 	}
 

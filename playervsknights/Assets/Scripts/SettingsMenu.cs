@@ -51,7 +51,7 @@ public class SettingsMenu : MonoBehaviour {
 		PlayerPrefs.SetInt ("buyredbeard", 0);
 		PlayerPrefs.SetInt ("buygoat", 0);
 		PlayerPrefs.SetInt ("tutorialcompleted", 0);
-
+		PlayerPrefs.SetInt ("buyjelly", 0);
 	}
 
 }

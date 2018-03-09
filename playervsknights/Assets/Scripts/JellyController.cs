@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class JellyController : MonoBehaviour {
-	/*
+	
 	Transform playerPosition;
-	Transform enemyPosition;
-	private List<GameObject> Projectiles = new List<GameObject> ();
-	public GameObject fireBallPrefab;
-	private float speed = 10f;
+	//Transform enemyPosition;
+	//private List<GameObject> Projectiles = new List<GameObject> ();
+	//public GameObject fireBallPrefab;
+	//private float speed = 12f;
 
 	//GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
@@ -21,7 +21,7 @@ public class JellyController : MonoBehaviour {
 		this.transform.position = Vector3.Lerp (transform.position, newPos, Time.deltaTime);
 	}
 
-	void OnTriggerEnter2D (Collider2D other) {
+	/*void OnTriggerEnter2D (Collider2D other) {
 		Debug.Log ("!!");
 		if (other.gameObject.tag == "Enemy") {
 			enemyPosition = other.gameObject.transform;
@@ -36,9 +36,9 @@ public class JellyController : MonoBehaviour {
 				}
 			}
 		}
-	}
+	}*/
 
-	void Shoot () {
+	/*void Shoot () {
 		GameObject fireBall = (GameObject)Instantiate (fireBallPrefab, transform.position, Quaternion.identity);
 		Projectiles.Add (fireBall); 
 	}*/

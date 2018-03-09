@@ -25,7 +25,7 @@ public class CharacterSelection : MonoBehaviour {
 		}
 		if (name == "Jane") {
 			characterTitle.text = "Jane";
-			displayText.text = "- Archer\n- Likes Pirate John\n- Loves killing knights";
+			displayText.text = "- Archer\n- Gets higher score bonus for killing knights\n- Loves killing knights";
 			PlayerController.playerID = 1;
 			if (PlayerPrefs.GetInt ("buyjane") == 0) {
 				unlockBotton.gameObject.SetActive (true);
@@ -55,7 +55,7 @@ public class CharacterSelection : MonoBehaviour {
 		}
 		if (name == "RedBeard") {
 			characterTitle.text = "Red Beard";
-			displayText.text = "- Kills Enemies on contact (Except Gold Knights)\n- Amazing Beard\n- Loves killing knights";
+			displayText.text = "- Kills Enemies on contact (Except Gold Knights)\n- Amazing Beard\n- Starts at a higher speed";
 			PlayerController.playerID = 4;
 			if (PlayerPrefs.GetInt ("buyredbeard") == 0) {
 				unlockBotton.gameObject.SetActive (true);

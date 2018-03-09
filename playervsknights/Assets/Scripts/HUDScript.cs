@@ -23,7 +23,11 @@ public class HUDScript : MonoBehaviour {
 
 	void Update () {
 		timeScore += Time.deltaTime;
-		totalScore = (int)((timeScore * 10) + (numberOfKills * 50) + (coinsFoundThisGame * 10));
+		if (PlayerController.playerID == 1) {
+			totalScore = (int)((timeScore * 10) + (numberOfKills * 70) + (coinsFoundThisGame * 10));
+		} else {
+			totalScore = (int)((timeScore * 10) + (numberOfKills * 50) + (coinsFoundThisGame * 10));
+		}
 
 		scoreText.text = "Score " + totalScore;
 		livesText.text = "" + numberOfLivesLeft;

@@ -20,7 +20,7 @@ public class GameOver : MonoBehaviour {
 		highScore.text = "Best Score: " + PlayerPrefs.GetInt("highscore");
 		coinsCollected.text = "Coins Found: " + HUDScript.coinsFoundThisGame;
 		knightsKilled.text = "Knights Killed: " + HUDScript.numberOfKills;
-		distanceTraveled.text = "Distance: " + Math.Round((HUDScript.timeScore / 2), 1) + "m";
+		distanceTraveled.text = "Distance: " + Math.Round((HUDScript.timeScore / 3), 1) + " m";
 	}
 
 	public void SettingsMenu () {
