@@ -2736,7 +2736,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1957942621}
   - component: {fileID: 1957942623}
-  - component: {fileID: 1957942622}
   m_Layer: 5
   m_Name: feedbackWindow
   m_TagString: Untagged
@@ -2769,17 +2768,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 1210, y: 762}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1957942622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1957942620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58c7393dbf0409c4d8cb06e905ca5e12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1957942623
 Animator:
   serializedVersion: 3

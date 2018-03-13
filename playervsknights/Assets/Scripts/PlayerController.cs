@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 	public GameManager theGameManager;
 	static public int playerID;
 	public int playerScore;
+	public string username;
 
 	public GameObject petJelly;
 
@@ -33,7 +34,8 @@ public class PlayerController : MonoBehaviour {
 		} else {
 			petJelly.gameObject.SetActive (false);
 		}
-
+		//username = PlayerPrefs.GetString ("username");
+		//Debug.Log (username);
 	}
 
 
@@ -53,11 +55,15 @@ public class PlayerController : MonoBehaviour {
 					HUDScript.numberOfLivesLeft -= 1;
 					gameObject.GetComponent<Animator> ().Play ("LifeLossAnimation");
 				} else {
+					/*playerScore = HUDScript.totalScore;
+					if (PlayerPrefs.GetInt ("highscore") < playerScore) {
+						PlayerPrefs.SetInt ("highscore", playerScore);
+						Debug.Log ("This works!!");
+						dreamloLeaderBoard.AddNewHighScore (username, playerScore);
+					}*/
+					LevelGenerator.initialSpawn = true;
 					playerExists = false;
 					theGameManager.RestartGame ();
-					playerScore = HUDScript.totalScore;
-					dreamloLeaderBoard.AddNewHighScore (PlayerPrefs.GetString("username"), PlayerPrefs.GetInt ("highscore"));
-					LevelGenerator.initialSpawn = true;
 				}
 			}
 		} else {
@@ -66,10 +72,14 @@ public class PlayerController : MonoBehaviour {
 					HUDScript.numberOfLivesLeft -= 1;
 					gameObject.GetComponent<Animator> ().Play ("LifeLossAnimation");
 				} else {
+					/*playerScore = HUDScript.totalScore;
+					if (PlayerPrefs.GetInt ("highscore") < playerScore) {
+						PlayerPrefs.SetInt ("highscore", playerScore);
+						Debug.Log ("This works!!:" + PlayerPrefs.GetInt ("highscore"));
+						dreamloLeaderBoard.AddNewHighScore (username, playerScore);
+					}*/
 					playerExists = false;
 					theGameManager.RestartGame ();
-					playerScore = HUDScript.totalScore;
-					dreamloLeaderBoard.AddNewHighScore (PlayerPrefs.GetString("username"), PlayerPrefs.GetInt ("highscore"));
 					LevelGenerator.initialSpawn = true;
 				}
 			}

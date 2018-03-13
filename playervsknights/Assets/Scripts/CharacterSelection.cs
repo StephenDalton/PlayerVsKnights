@@ -76,7 +76,6 @@ public class CharacterSelection : MonoBehaviour {
 	}
 
 	public void Awake () {
-		PlayerPrefs.SetInt ("username", 0);
 		if (PlayerPrefs.GetInt("usernamechosen") == 1) {
 			usernameScreen.gameObject.SetActive (false);
 		} else {
@@ -90,14 +89,17 @@ public class CharacterSelection : MonoBehaviour {
 	}
 
 	public void setUsername() {
-		if (chosenUserName.text.Length > 2 && chosenUserName.text.Length < 11) {
-			//Check if username contains an *, dreamlo highscoreboard cant accept *'s in usernames
-			chosenUserName.text = Regex.Replace(chosenUserName.text, @"\*", "." );
-			PlayerPrefs.SetString ("username", chosenUserName.text);
-			PlayerPrefs.SetInt ("usernamechosen", 1);
-			usernameScreen.gameObject.SetActive (false);
-		} else {
-			usernameError.gameObject.SetActive (true);
+		//check if username has been chosen yet
+		if (PlayerPrefs.GetInt("usernamechosen") != 1) {
+			if (chosenUserName.text.Length > 2 && chosenUserName.text.Length < 11) {
+				//Check if username contains an *, dreamlo highscoreboard cant accept *'s in usernames
+				chosenUserName.text = Regex.Replace(chosenUserName.text, @"\*", "." );
+				PlayerPrefs.SetString ("username", chosenUserName.text);
+				PlayerPrefs.SetInt ("usernamechosen", 1);
+				usernameScreen.gameObject.SetActive (false);
+			} else {
+				usernameError.gameObject.SetActive (true);
+			}
 		}
 	}
 

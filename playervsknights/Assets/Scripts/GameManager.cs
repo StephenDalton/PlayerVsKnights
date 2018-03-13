@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour {
 	public Button fireButton;
 	int totalEnemiesKilled;
 	public int totalCoinsCollected;
+	public string username;
+	public int playerScore;
 
 	public void Awake () {
 		if (PlayerPrefs.GetInt ("audio") == 0) {
@@ -31,15 +33,25 @@ public class GameManager : MonoBehaviour {
 		} else {
 			fireButton.gameObject.SetActive (true);
 		}
+		/*username = PlayerPrefs.GetString ("username");
+		Debug.Log (username); */
+	}
+
+	public void Start () {
+		username = PlayerPrefs.GetString ("username");
+		Debug.Log (username);
 	}
 
 	public void RestartGame() {
+		playerScore = HUDScript.totalScore;
+		if (PlayerPrefs.GetInt ("highscore") < playerScore) {
+			PlayerPrefs.SetInt ("highscore", playerScore);
+			Debug.Log ("This works!!");
+			dreamloLeaderBoard.AddNewHighScore (username, playerScore);
+		}
 		PlayerPrefs.SetInt ("tutorialcompleted", 1);
 		Time.timeScale = 0;
 		isGameOver = true;
-		if (PlayerPrefs.GetInt ("highscore") < HUDScript.totalScore) {
-			PlayerPrefs.SetInt ("highscore", HUDScript.totalScore);
-		}
 		totalEnemiesKilled += HUDScript.numberOfKills;
 
 		theDeathScreen.gameObject.SetActive (true);

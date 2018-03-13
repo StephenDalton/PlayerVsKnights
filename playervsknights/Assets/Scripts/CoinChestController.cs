@@ -8,8 +8,8 @@ public class CoinChestController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.name == "Player") {
-			HUDScript.coinsFoundThisGame += 10;
-			PlayerPrefs.SetInt ("coins", PlayerPrefs.GetInt("coins") + 10);
+			HUDScript.coinsFoundThisGame += 5;
+			PlayerPrefs.SetInt ("coins", PlayerPrefs.GetInt("coins") + 5);
 			AudioSource.PlayClipAtPoint (chestSound, transform.position);
 			gameObject.SetActive (false);
 		}

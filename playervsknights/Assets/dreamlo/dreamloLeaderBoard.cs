@@ -8,10 +8,11 @@ public class dreamloLeaderBoard : MonoBehaviour {
 	
 	public string privateCode = "t1vduP4M-0mETiku2_iu3QI0ZFXBJ6zUWAMMOT_07sFg";
 	public string publicCode = "5a95b21939992d09e4f02f17";
-	
+
 	public HighScore[] highscoresList;
 	static dreamloLeaderBoard instance;
 	DisplayHighscores highscoresDisplay;
+
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	// A player named Carmine got a score of 100. If the same name is added twice, we use the higher score.
@@ -37,6 +38,7 @@ public class dreamloLeaderBoard : MonoBehaviour {
 
 	IEnumerator UploadNewHighscore (string username, int score) {
 		WWW www = new WWW(dreamloWebserviceURL + privateCode + "/add/" + WWW.EscapeURL(username) + "/" + score);
+		Debug.Log(score);
 		yield return www;
 
 		if (string.IsNullOrEmpty (www.error)) {
@@ -46,6 +48,7 @@ public class dreamloLeaderBoard : MonoBehaviour {
 			print ("Error Uploading: " + www.error);
 		}
 	}
+
 	public void DownloadHighScores () {
 		StartCoroutine ("DownloadHighscoresFromDatabase");
 	}
@@ -72,7 +75,7 @@ public class dreamloLeaderBoard : MonoBehaviour {
 			string username = entryInfo [0];
 			int score = int.Parse(entryInfo[1]);
 			highscoresList [i] = new HighScore (username, score);
-			//print (highscoresList[i].username + ": " + highscoresList [i].score);
+			print (highscoresList[i].username + ": " + highscoresList [i].score);
 		}
 	}
 		

@@ -296,7 +296,8 @@ Prefab:
       propertyPath: petJelly
       value: 
       objectReference: {fileID: 2055881771}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114442974225176798, guid: 9360b21c85c1a9241beda6bb6d8ae568, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9360b21c85c1a9241beda6bb6d8ae568, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &381902597 stripped
@@ -778,6 +779,20 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -367
       objectReference: {fileID: 0}
+    - target: {fileID: 1200020172239602, guid: ab89e9c159ca09040a17baa085cc787a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205671458373594, guid: ab89e9c159ca09040a17baa085cc787a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588261257812164, guid: ab89e9c159ca09040a17baa085cc787a,
+        type: 2}
+      propertyPath: m_Text
+      value: Coins are used to unlock characters in the shop.  Collect these or Chests
+        in-game or purchase more in the shop.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab89e9c159ca09040a17baa085cc787a, type: 2}
   m_IsPrefabParent: 0
@@ -820,7 +835,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114738499225243060, guid: e209ca10348a33f4dafa0e8fbe24d6d0, type: 2}
+    - {fileID: 114711059279165196, guid: e209ca10348a33f4dafa0e8fbe24d6d0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e209ca10348a33f4dafa0e8fbe24d6d0, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1721209895
@@ -1067,3 +1084,33 @@ GameObject:
   m_PrefabParentObject: {fileID: 1289408188660490, guid: 76c43e71cfac79b4ebb6a1d46a22ab71,
     type: 2}
   m_PrefabInternal: {fileID: 2055881770}
+--- !u!1 &2135975788 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1511421615069748, guid: d35e81fc746bee044900ea6374e47612,
+    type: 2}
+  m_PrefabInternal: {fileID: 1850348237}
+--- !u!114 &2135975789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135975788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f579fefeba774393965b534c29d2e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  privateCode: t1vduP4M-0mETiku2_iu3QI0ZFXBJ6zUWAMMOT_07sFg
+  publicCode: 5a95b21939992d09e4f02f17
+--- !u!114 &2135975790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135975788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ee3b69dc30d6946bc773615a0e2768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highscoreText: []
