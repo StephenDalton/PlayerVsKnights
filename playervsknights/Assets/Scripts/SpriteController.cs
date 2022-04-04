@@ -8,6 +8,10 @@ public class SpriteController : MonoBehaviour {
 	private int playerID = PlayerController.playerID;
 
 	void Start () {
+		
+		gameObject.GetComponent<SpriteRenderer>().sprite = PlayerSprites[playerID];
+		
+		/*
 		if (playerID == 0) {
 			gameObject.GetComponent<SpriteRenderer> ().sprite = PlayerSprites [0];
 		}
@@ -28,5 +32,6 @@ public class SpriteController : MonoBehaviour {
 		}
 		if (playerID == 6) {
 			gameObject.GetComponent<SpriteRenderer> ().sprite = PlayerSprites [6];		}
+		*/
 	}
 }
